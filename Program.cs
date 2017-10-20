@@ -22,20 +22,26 @@ namespace Calculadora
             MostrarMenu();
 
             int opcion = int.Parse(Console.ReadLine());
-            switch(opcion)
-            {
-                case 1:
-                    //sumar TODO
-                    break;
-                case 2:         
-                    //multiplicar TODO           
-                    break;
-                default:
-                    Console.WriteLine("Opción inválida");                    
-                    MostrarMenu();
-                    break;            
+            while(opcion != 0)
+            {                
+                switch(opcion)
+                {
+                    case 1:
+                        //sumar TODO
+                        break;
+                    case 2:         
+                        //multiplicar TODO           
+                        break;
+                    default:
+                        Console.WriteLine("Opción inválida");                    
+                        MostrarMenu();
+                        opcion = int.Parse(Console.ReadLine());
+                        break;            
+                }
             }
 
+            Console.WriteLine("Chau!!!!");
+            Console.ReadKey();
         }
     }
 }
